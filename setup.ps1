@@ -13,29 +13,31 @@ Write-Host ""
 Write-Host "  Fortis - Cybersecurity Advisor : setup" -ForegroundColor Cyan
 Write-Host "  ----------------------------------------" -ForegroundColor DarkGray
 
-# 1. Python check
+# 1. Python check (pinned to 3.10 - 3.12 for prebuilt llama-cpp-python wheel compatibility)
 $py = $null
-foreach ($c in @("python", "py")) {
+foreach ($c in @("py -3.12", "py -3.11", "py -3.10", "python", "py")) {
     try {
-        $v = & $c --version 2>$null
-        if ($v -match "Python 3\.(1[0-4]|[0-9])") { $py = $c; break }
+        $v = Invoke-Expression "$c --version" 2>$null
+        if ($v -match "Python 3\.1[0-2]\.") { $py = $c; break }
     } catch {}
 }
+
 if (-not $py) {
     Write-Host ""
-    Write-Host "  [X] Python 3.10+ not found." -ForegroundColor Red
-    Write-Host "      Install it from https://www.python.org/downloads/" -ForegroundColor Yellow
+    Write-Host "  [X] Python 3.10 - 3.12 not found." -ForegroundColor Red
+    Write-Host "      Install Python 3.12 from https://www.python.org/downloads/" -ForegroundColor Yellow
     Write-Host "      IMPORTANT: tick 'Add python.exe to PATH' in the installer." -ForegroundColor Yellow
     Read-Host "  Press Enter to exit"
     exit 1
 }
-Write-Host "  [ok] $(& $py --version)"
+$pyVer = Invoke-Expression "$py --version"
+Write-Host "  [ok] $pyVer ($py)"
 
 # 2. venv
 Set-Location $PSScriptRoot
 if (-not (Test-Path ".venv\Scripts\python.exe")) {
     Write-Host "  [..] Creating virtual environment (one-time)..."
-    & $py -m venv .venv
+    Invoke-Expression "$py -m venv .venv"
     if ($LASTEXITCODE -ne 0) { Write-Host "  [X] venv creation failed" -ForegroundColor Red; Read-Host "  Press Enter to exit"; exit 1 }
 } else {
     Write-Host "  [ok] Virtual environment exists"
@@ -54,7 +56,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # 4. llama-cpp-python: prebuilt CUDA wheel if GPU, else prebuilt CPU wheel
-#    (never builds from source - that needs MSVC/CMake which we can't assume)
+#    (never builds from source unless MSVC is detected)
 $marker = Join-Path $PSScriptRoot ".llama-cuda-ok"
 $haveLlama = Invoke-Native { & $venvPy -c "import llama_cpp" 2>$null }
 if ($LASTEXITCODE -ne 0) {
@@ -72,34 +74,36 @@ if ($LASTEXITCODE -ne 0) {
         return ($LASTEXITCODE -eq 0)
     }
 
+    function Uninstall-LlamaSafe {
+        Invoke-Native { & $venvPy -m pip uninstall --disable-pip-version-check --yes llama-cpp-python 2>$null | Out-Null }
+        $global:LASTEXITCODE = 0
+    }
+
     if (Test-Path "$venvPy") {
-        & $venvPy -m pip uninstall --disable-pip-version-check --yes llama_cpp_python 2>$null | Out-Null
-        $LASTEXITCODE = 0
+        Uninstall-LlamaSafe
     }
 
     if ($hasNvidia) {
         Write-Host "       NVIDIA GPU detected - trying the CUDA wheel first..."
-        & $venvPy -m pip install --disable-pip-version-check --quiet --only-binary :all: llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124
+        Invoke-Native { & $venvPy -m pip install --disable-pip-version-check --quiet --only-binary :all: llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124 }
         if ((Test-LlamaImport)) { $ok = $true }
         if ($ok) {
             New-Item -ItemType File -Path $marker -Force | Out-Null
             Write-Host "  [ok] Engine installed (GPU-accelerated)"
         } else {
             Write-Host "       CUDA wheel failed to install or import - cleaning up and trying the CPU wheel..."
-            & $venvPy -m pip uninstall --disable-pip-version-check --yes llama_cpp_python 2>$null | Out-Null
-            $LASTEXITCODE = 0
+            Uninstall-LlamaSafe
         }
     }
     if (-not $ok) {
         Write-Host "       Trying the prebuilt CPU wheel (llama.cpp CPU index)..."
-        & $venvPy -m pip install --disable-pip-version-check --quiet --only-binary :all: llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+        Invoke-Native { & $venvPy -m pip install --disable-pip-version-check --quiet --only-binary :all: llama-cpp-python --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu }
         if ((Test-LlamaImport)) { $ok = $true }
         if ($ok) {
             Write-Host "  [ok] Engine installed (CPU)"
         } else {
             Write-Host "       CPU wheel unavailable - cleaning up and trying PyPI (may build from source)..."
-            & $venvPy -m pip uninstall --disable-pip-version-check --yes llama_cpp_python 2>$null | Out-Null
-            $LASTEXITCODE = 0
+            Uninstall-LlamaSafe
         }
     }
     if (-not $ok) {
@@ -114,24 +118,22 @@ if ($LASTEXITCODE -ne 0) {
         } catch {}
         if ($hasMsvc) {
             Write-Host "       No prebuilt wheel - compiling from source with the detected MSVC toolchain (needs CMake+nmake)..."
-            & $venvPy -m pip install --disable-pip-version-check --quiet llama-cpp-python
+            Invoke-Native { & $venvPy -m pip install --disable-pip-version-check --quiet llama-cpp-python }
             if ((Test-LlamaImport)) { $ok = $true }
         }
         if ($ok) {
             Write-Host "  [ok] Engine installed (CPU, built from source)"
         } else {
-            Write-Host "  [X] No prebuilt llama-cpp-python wheel for $(& $py --version) on this system." -ForegroundColor Red
+            Write-Host "  [X] No prebuilt llama-cpp-python wheel for $pyVer on this system." -ForegroundColor Red
             Write-Host "      Options:" -ForegroundColor Yellow
-            Write-Host "        1. Install Python 3.13 (has prebuilt wheels) and rerun setup." -ForegroundColor Yellow
+            Write-Host "        1. Install Python 3.12 (has prebuilt wheels) and rerun setup." -ForegroundColor Yellow
             Write-Host "        2. Install Visual Studio Build Tools (Desktop development with C++) and rerun." -ForegroundColor Yellow
-            Write-Host "        3. Use the community Windows wheel collection (cp314) from: llama-cpp-wheels on Hugging Face." -ForegroundColor Yellow
             Read-Host "  Press Enter to exit"
             exit 1
         }
     }
 } else {
     Write-Host "  [ok] AI engine present"
-    if (-not (Test-Path $marker)) { New-Item -ItemType File -Path $marker -Force | Out-Null }
 }
 
 # 5. offline self-test (fast, no model download)
