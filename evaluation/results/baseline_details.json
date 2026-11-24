@@ -1,0 +1,902 @@
+[
+  {
+    "id": "TC-01",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 89.265,
+    "reply_preview": "Based on the provided framework controls and uploaded document excerpts, I'll address the client's question regarding multi-factor authentication (MFA) enforcement under NIST CSF.\n\n**Observation:** Th"
+  },
+  {
+    "id": "TC-02",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 63.548,
+    "reply_preview": "Injection Prevention Requirements in OWASP Top 10:\n\nThe OWASP Top 10, specifically A01:2017-Injection, highlights the risk of injection attacks, which occur when an application passes user input to an"
+  },
+  {
+    "id": "TC-03",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 64.544,
+    "reply_preview": "Based on the provided framework controls, CIS Controls v8.1 governs the inventory of enterprise assets through the following controls:\n\n- CIS Control 1: Establish and maintain an accurate, detailed, a"
+  },
+  {
+    "id": "TC-04",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 58.552,
+    "reply_preview": "Based on the provided framework controls and the uploaded document excerpts, I will summarize the cryptographic key management principles under NIST CSF.\n\n**Observation:** The uploaded document excerp"
+  },
+  {
+    "id": "TC-05",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 64.305,
+    "reply_preview": "OWASP Top 10 addresses broken access control through several controls, but the most relevant one is A03:2021 - Authentication and Authorization Failures (OWASP Top 10 2021).\n\nThis control highlights t"
+  },
+  {
+    "id": "TC-06",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 67.304,
+    "reply_preview": "Based on the CIS Controls v8.1 (CIS-8), the expectation for audit logging is to collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack. T"
+  },
+  {
+    "id": "TC-07",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 67.114,
+    "reply_preview": "Based on the provided framework controls, the NIST CSF function that covers incident response planning is Identification (ID).\n\nSpecifically, the control ID is ID.IM (CSF 2.0 (Feb 2024)), which is \"Im"
+  },
+  {
+    "id": "TC-08",
+    "category": "framework_mapping",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 63.782,
+    "reply_preview": "Based on the CIS Controls v8.1, specifically CIS-4, Establish and maintain the secure configuration of enterprise assets and software, I'd like to explain the concept of secure configuration baselines"
+  },
+  {
+    "id": "TC-09",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-10",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-11",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-12",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-13",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-14",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-15",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-16",
+    "category": "cti_ioc_triage",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-17",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 68.431,
+    "reply_preview": "Based on the uploaded SSH config excerpts, I've identified several vulnerabilities and weaknesses that can be categorized using the Common Weakness Enumeration (CWE) framework.\n\n1. **CWE-295: Improper"
+  },
+  {
+    "id": "TC-18",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 62.569,
+    "reply_preview": "Based on the uploaded excerpts, I've identified several access control gaps in the IAM policy.\n\n1. **PermitRootLogin yes**: This setting allows root login, which is a significant security risk. Accord"
+  },
+  {
+    "id": "TC-19",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.394,
+    "reply_preview": "Based on the provided excerpts, I've identified potential vulnerabilities in the web app snippet.\n\n**CWE-20: Improper Input Validation**\n\nThe `API_KEY` is hardcoded with a secret value, which is a pot"
+  },
+  {
+    "id": "TC-20",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 64.176,
+    "reply_preview": "Based on the provided excerpts, I've identified potential vulnerabilities in the TLS configuration.\n\n**Vulnerability 1: TLSv1.0 enabled**\n\nThe `Protocol 2` directive is likely enabling TLSv1.0, which "
+  },
+  {
+    "id": "TC-21",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 63.281,
+    "reply_preview": "Based on the provided excerpts from the uploaded documents, I've identified several potential issues with the firewall rules.\n\n**Insecure Configuration (CIS Benchmarks 9.2, CIS Controls v8.1)**\n\nThe r"
+  },
+  {
+    "id": "TC-22",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-23",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 60.438,
+    "reply_preview": "Based on the provided configuration excerpts, I will evaluate the logging coverage and identify potential vulnerabilities.\n\n**Evaluation**\n\nThe configuration excerpts indicate that logging is currentl"
+  },
+  {
+    "id": "TC-24",
+    "category": "doc_config_review",
+    "rag_level": "basic",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 59.104,
+    "reply_preview": "Based on the provided excerpts, I've identified potential privilege escalation risks and vulnerabilities.\n\n**Vulnerability 1: Unrestricted Root Login**\n\n* CWE ID: CWE-788 (Unrestricted Root Login)\n* T"
+  },
+  {
+    "id": "TC-25",
+    "category": "out_of_scope",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-26",
+    "category": "out_of_scope",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.004,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-27",
+    "category": "out_of_scope",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.004,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-28",
+    "category": "out_of_scope",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-29",
+    "category": "out_of_scope",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-30",
+    "category": "out_of_scope",
+    "rag_level": "basic",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-01",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 67.314,
+    "reply_preview": "Based on the provided framework controls and the uploaded document excerpts, I will address the client's question regarding multi-factor authentication (MFA) enforcement under NIST CSF.\n\n**Observation"
+  },
+  {
+    "id": "TC-02",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 63.85,
+    "reply_preview": "Injection Prevention Requirements in OWASP Top 10:\n\nThe OWASP Top 10 2023 includes several injection-related vulnerabilities, which are critical to address to prevent exploitation. I'll outline the ke"
+  },
+  {
+    "id": "TC-03",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 62.604,
+    "reply_preview": "Based on the provided framework controls, the following CIS Controls govern the inventory of enterprise assets:\n\n* CIS Control 1.1: Establish and maintain an accurate, detailed, and up-to-date invento"
+  },
+  {
+    "id": "TC-04",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 59.677,
+    "reply_preview": "Based on the provided framework controls and the uploaded document excerpts, I'll summarize the cryptographic key management principles under NIST CSF.\n\n**NIST CSF PR.PS (NIST CSF Rev. 1.1)**: The NIS"
+  },
+  {
+    "id": "TC-05",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 61.096,
+    "reply_preview": "OWASP Top 10 addresses broken access control through A03:2017 - Broken Access Control. This control highlights the risk of unauthorized data access, modification, or destruction due to inadequate acce"
+  },
+  {
+    "id": "TC-06",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 60.533,
+    "reply_preview": "Based on the CIS Controls v8.1, specifically Control 8.2, \"Collect audit logs on enterprise assets,\" we can outline the audit logging expectations.\n\n**Control 8.2: Collect audit logs on enterprise ass"
+  },
+  {
+    "id": "TC-07",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 61.784,
+    "reply_preview": "Based on the provided framework controls, the NIST CSF function that covers incident response planning is ID.RD (NIST CSF 2.0, Feb 2024), which is \"Identify, Assess, and Prioritize Risk\". However, thi"
+  },
+  {
+    "id": "TC-08",
+    "category": "framework_mapping",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 62.443,
+    "reply_preview": "Based on the CIS Controls v8.1, specifically CIS_BENCHMARKS 4.1, 4.4, and CIS-4, I'll explain secure configuration baselines.\n\nSecure configuration baselines are a set of predefined, well-documented c"
+  },
+  {
+    "id": "TC-09",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-10",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-11",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-12",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-13",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-14",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-15",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-16",
+    "category": "cti_ioc_triage",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-17",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 69.65,
+    "reply_preview": "Based on the uploaded SSH config, I have identified several vulnerabilities and weaknesses.\n\n**1. CWE-798: Use of Hard-coded Credentials**\n\nThe line `API_KEY='hardcoded_secret_value'` indicates that a"
+  },
+  {
+    "id": "TC-18",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 69.626,
+    "reply_preview": "Based on the provided excerpts, I've identified several access control gaps:\n\n1. **PermitRootLogin yes**: This setting allows root login, which is a significant security risk. According to [NIST_800-5"
+  },
+  {
+    "id": "TC-19",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 62.869,
+    "reply_preview": "Based on the provided excerpts, I've identified potential vulnerabilities that align with the CWE Top 25 Most Dangerous Software Weaknesses 2023.\n\n**CWE-20: Improper Input Validation**\n\n* Severity: Hi"
+  },
+  {
+    "id": "TC-20",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.128,
+    "reply_preview": "Based on the provided excerpts, I've identified potential vulnerabilities in the TLS configuration.\n\n**Vulnerability 1: TLSv1.0 enabled**\n\nThe presence of `TLSv1.0 enabled` in the configuration indica"
+  },
+  {
+    "id": "TC-21",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 62.583,
+    "reply_preview": "Based on the provided excerpts from the uploaded documents, I've identified potential security concerns related to overly permissive ingress rules.\n\n**Insecure Default Configuration (OWASP Top 10:2025"
+  },
+  {
+    "id": "TC-22",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-23",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.49,
+    "reply_preview": "Based on the provided excerpts, I've identified several logging-related issues that pose a risk to the system's security.\n\n**Insufficient Logging (CWE-762: Inadequate Logging)**\n\n* The `logging` setti"
+  },
+  {
+    "id": "TC-24",
+    "category": "doc_config_review",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 60.918,
+    "reply_preview": "Based on the provided excerpts and framework controls, I've identified potential privilege escalation risks in the uploaded container spec.\n\n**CWE-269: Improper Privilege Management**\n\nThe `PermitRoot"
+  },
+  {
+    "id": "TC-25",
+    "category": "out_of_scope",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-26",
+    "category": "out_of_scope",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-27",
+    "category": "out_of_scope",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-28",
+    "category": "out_of_scope",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-29",
+    "category": "out_of_scope",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-30",
+    "category": "out_of_scope",
+    "rag_level": "standard",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-01",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 66.624,
+    "reply_preview": "Based on the provided framework controls, I'll address the question of enforcing multi-factor authentication under NIST CSF.\n\nThe NIST Cybersecurity Framework (CSF) provides a structured approach to m"
+  },
+  {
+    "id": "TC-02",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 62.734,
+    "reply_preview": "Injection Prevention Requirements in OWASP Top 10:\n\nThe OWASP Top 10 2023 includes several injection-related vulnerabilities, which can be addressed by implementing the following controls:\n\n1. **Input"
+  },
+  {
+    "id": "TC-03",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 60.983,
+    "reply_preview": "Based on the provided framework controls, the CIS Controls that govern the inventory of enterprise assets are:\n\n1. CIS_BENCHMARKS 1.1 (CIS Controls v8.1): Establish and maintain an accurate, detailed,"
+  },
+  {
+    "id": "TC-04",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 59.73,
+    "reply_preview": "Based on the provided framework controls and excerpts from the uploaded documents, I'll summarize the cryptographic key management principles under NIST CSF.\n\n**Observation:** The uploaded document co"
+  },
+  {
+    "id": "TC-05",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.369,
+    "reply_preview": "Based on the provided framework controls and uploaded documents, I'll address the client's question regarding broken access control and its relation to OWASP Top 10.\n\nOWASP Top 10 is a widely recogniz"
+  },
+  {
+    "id": "TC-06",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.04,
+    "reply_preview": "Based on the CIS Controls v8.1, specifically CIS Benchmark 8.2, the expectation for audit logging is to collect audit logs on enterprise assets. This involves ensuring that logging is enabled across e"
+  },
+  {
+    "id": "TC-07",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": false,
+    "latency_s": 63.937,
+    "reply_preview": "Based on the provided framework controls, the NIST CSF function that covers incident response planning is ID.RD (CSF 2.0 (Feb 2024)), which is \"Implementing incident response.\" This function is part o"
+  },
+  {
+    "id": "TC-08",
+    "category": "framework_mapping",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 60.306,
+    "reply_preview": "Based on the CIS Controls v8.1, specifically CIS_BENCHMARKS 4.1, 4.4, and CIS-4, I'll provide an explanation of secure configuration baselines.\n\n**Secure Configuration Baselines**\n\nSecure configuratio"
+  },
+  {
+    "id": "TC-09",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-10",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-11",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-12",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-13",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-14",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-15",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-16",
+    "category": "cti_ioc_triage",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-17",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 64.611,
+    "reply_preview": "Based on the uploaded SSH config, I've identified several vulnerabilities and weaknesses.\n\n**1. CWE-798: Use of Hard-coded Credentials**\n\nThe `API_KEY` is hardcoded with the value `'hardcoded_secret_v"
+  },
+  {
+    "id": "TC-18",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.452,
+    "reply_preview": "Based on the provided excerpts and framework controls, I've identified several access control gaps:\n\n1. **PermitRootLogin yes**: This setting allows root login, which is a significant security risk. A"
+  },
+  {
+    "id": "TC-19",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 62.454,
+    "reply_preview": "Based on the provided excerpts from the uploaded documents, I have identified potential vulnerabilities in the web application.\n\n**CWE-20: Improper Input Validation**\n\nThe `API_KEY` is hardcoded with "
+  },
+  {
+    "id": "TC-20",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.022,
+    "reply_preview": "Based on the provided excerpts, I've identified potential vulnerabilities in the TLS configuration.\n\n**Vulnerability 1: TLSv1.0 enabled**\n\n* CWE ID: CWE-310 (Insufficient Cryptographic Protection)\n* C"
+  },
+  {
+    "id": "TC-21",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.68,
+    "reply_preview": "Based on the provided firewall rules, I've identified a potential issue with overly permissive ingress.\n\n**Insecure Direct Object Reference (IDOR) - CWE-94**\nThe rule `0.0.0.0/0 allow all inbound` all"
+  },
+  {
+    "id": "TC-22",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": true,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-23",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": false,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 61.3,
+    "reply_preview": "Based on the provided excerpts from the uploaded documents, I have identified several areas of concern related to logging coverage.\n\n**Insufficient Logging Configuration (CWE-762: Inadequate Logging)*"
+  },
+  {
+    "id": "TC-24",
+    "category": "doc_config_review",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 60.018,
+    "reply_preview": "Based on the uploaded document excerpts, I've identified potential privilege escalation risks.\n\n**CWE-269: Improper Privilege Management**\n\nThe `PermitRootLogin yes` setting allows root login, which i"
+  },
+  {
+    "id": "TC-25",
+    "category": "out_of_scope",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-26",
+    "category": "out_of_scope",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.006,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-27",
+    "category": "out_of_scope",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.007,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-28",
+    "category": "out_of_scope",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-29",
+    "category": "out_of_scope",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  },
+  {
+    "id": "TC-30",
+    "category": "out_of_scope",
+    "rag_level": "full",
+    "passed": true,
+    "false_refusal": false,
+    "grounded": true,
+    "latency_s": 0.005,
+    "reply_preview": "I'm Fortis, a cybersecurity advisory assistant. I can only help with security-related topics such as:\n\n- Document, configuration, and code security reviews\n- Framework mapping (NIST CSF, OWASP Top 10,"
+  }
+]

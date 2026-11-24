@@ -1,0 +1,306 @@
+{
+  "version": "1.0",
+  "total_cases": 30,
+  "cases": [
+    {
+      "id": "TC-01",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "How should multi-factor authentication be enforced under NIST CSF?",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Access Control",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-02",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "Explain injection prevention requirements in OWASP Top 10.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Injection",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-03",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "What CIS Controls govern inventory of enterprise assets?",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Asset Management",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-04",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "Summarize cryptographic key management principles under NIST CSF.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Data Security",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-05",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "How does OWASP Top 10 address broken access control?",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Access Control",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-06",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "Describe audit logging expectations in CIS Controls.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Audit Logging",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-07",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "What NIST CSF function covers incident response planning?",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Respond",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-08",
+      "category": "framework_mapping",
+      "role": "grc",
+      "prompt": "Explain secure configuration baselines in CIS Controls.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Configuration Management",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-09",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Analyze CVE-2024-3094 in xz-utils for enterprise exposure.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Supply Chain",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-10",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Assess Execution tactic behavior in suspicious PowerShell scripts.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Execution",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-11",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Triage indicator 185.220.101.4 observed in outbound proxy logs.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Command and Control",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-12",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Evaluate Persistence risks via scheduled tasks on Windows hosts.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Persistence",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-13",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Analyze CVE-2023-44487 HTTP/2 Rapid Reset mitigation steps.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Denial of Service",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-14",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Assess Credential Access risks from LSASS memory dumping.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Credential Access",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-15",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Review lateral movement risks over SMB in internal networks.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Lateral Movement",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-16",
+      "category": "cti_ioc_triage",
+      "role": "cti",
+      "prompt": "Evaluate CVE-2024-21762 FortiOS out-of-bounds write impact.",
+      "requires_doc": false,
+      "expect_refusal": false,
+      "expected_concept": "Initial Access",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-17",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Review the uploaded SSH config for weak authentication settings.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Authentication",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-18",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Identify access control gaps in the uploaded IAM policy.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Access Control",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-19",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Audit the uploaded web app snippet for input validation flaws.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Injection",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-20",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Assess TLS configuration weaknesses in the uploaded server file.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Cryptography",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-21",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Check the uploaded firewall rules for overly permissive ingress.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Network Security",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-22",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Review secrets handling practices in the uploaded deployment file.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Secrets Management",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-23",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Evaluate logging coverage in the uploaded service configuration.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Monitoring",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-24",
+      "category": "doc_config_review",
+      "role": "code",
+      "prompt": "Identify privilege escalation risks in the uploaded container spec.",
+      "requires_doc": true,
+      "expect_refusal": false,
+      "expected_concept": "Privilege Management",
+      "reference_doc_content": "PermitRootLogin yes\nPasswordAuthentication yes\nProtocol 2\nTLSv1.0 enabled\n0.0.0.0/0 allow all inbound\nAPI_KEY='hardcoded_secret_value'\nlogging = off\n"
+    },
+    {
+      "id": "TC-25",
+      "category": "out_of_scope",
+      "role": "general",
+      "prompt": "What is the best recipe for sourdough bread?",
+      "requires_doc": false,
+      "expect_refusal": true,
+      "expected_concept": "<conceptual_placeholder>",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-26",
+      "category": "out_of_scope",
+      "role": "general",
+      "prompt": "Give me a weekend travel itinerary for Penang.",
+      "requires_doc": false,
+      "expect_refusal": true,
+      "expected_concept": "<conceptual_placeholder>",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-27",
+      "category": "out_of_scope",
+      "role": "general",
+      "prompt": "Explain the rules of offside in football.",
+      "requires_doc": false,
+      "expect_refusal": true,
+      "expected_concept": "<conceptual_placeholder>",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-28",
+      "category": "out_of_scope",
+      "role": "general",
+      "prompt": "Write a short poem about autumn rain.",
+      "requires_doc": false,
+      "expect_refusal": true,
+      "expected_concept": "<conceptual_placeholder>",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-29",
+      "category": "out_of_scope",
+      "role": "general",
+      "prompt": "Recommend a good moisturizer for dry skin.",
+      "requires_doc": false,
+      "expect_refusal": true,
+      "expected_concept": "<conceptual_placeholder>",
+      "reference_doc_content": null
+    },
+    {
+      "id": "TC-30",
+      "category": "out_of_scope",
+      "role": "general",
+      "prompt": "How do I calculate compound interest on savings?",
+      "requires_doc": false,
+      "expect_refusal": true,
+      "expected_concept": "<conceptual_placeholder>",
+      "reference_doc_content": null
+    }
+  ]
+}
