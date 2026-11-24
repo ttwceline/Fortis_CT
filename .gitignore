@@ -1,13 +1,33 @@
-.env
+# Python environments & bytecode
 .venv/
+venv/
 __pycache__/
-*.pyc
-.DS_Store
-.llama-cuda-ok
-desktop/data/
-training.zip
+*.py[cod]
+*.pyo
 .pytest_cache/
-fortis-out.log
-fortis-err.log
-.opencode/
-.openchamber/
+.coverage
+
+# Fortis hardware markers, local models & runtime data
+.llama-cuda-ok
+models/
+*.gguf
+*.bin
+chroma/
+data/chroma/
+uploads/
+reports/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# PyCharm / IDE & OS files
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
