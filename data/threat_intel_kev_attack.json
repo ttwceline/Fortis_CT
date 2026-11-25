@@ -1,0 +1,66 @@
+[
+  {
+    "id": "CVE-2024-3094",
+    "source": "CISA_KEV_ADVISORY",
+    "tactic": "Supply Chain",
+    "technique_id": "T1195.002",
+    "title": "XZ Utils Backdoor Supply Chain Compromise",
+    "text": "CVE-2024-3094 (MITRE ATT&CK T1195.002 Supply Chain Compromise): Malicious backdoor injected into upstream xz/liblzma versions 5.6.0 and 5.6.1 affecting Linux distributions with systemd-linked OpenSSH. Enables pre-authentication remote code execution via crafted Ed448 signatures. Remediation: Downgrade xz-utils/liblzma to uncompromised 5.4.x builds immediately, audit SSH exposure, and rotate host keys."
+  },
+  {
+    "id": "CVE-2024-21762",
+    "source": "CISA_KEV_ADVISORY",
+    "tactic": "Initial Access",
+    "technique_id": "T1190",
+    "title": "Fortinet FortiOS Out-of-Bounds Write Vulnerability",
+    "text": "CVE-2024-21762 (CISA KEV, MITRE ATT&CK T1190 Exploit Public-Facing Application): Critical out-of-bounds write in FortiOS SSL VPN allowing unauthenticated remote attackers to execute arbitrary code via specially crafted HTTP requests. Remediation: Upgrade FortiOS to patched releases (7.4.3+, 7.2.7+, 7.0.14+), disable SSL VPN if unused, and inspect firewall logs for anomalous outbound connections."
+  },
+  {
+    "id": "CVE-2023-44487",
+    "source": "CISA_KEV_ADVISORY",
+    "tactic": "Denial of Service",
+    "technique_id": "T1499.004",
+    "title": "HTTP/2 Rapid Reset Distributed Denial of Service",
+    "text": "CVE-2023-44487 (CISA KEV, MITRE ATT&CK T1499.004 Application or System Exploitation): Protocol-level Denial of Service exploiting HTTP/2 stream multiplexing and RST_STREAM frames to exhaust server resources without triggering standard concurrent stream limits. Remediation: Apply vendor HTTP/2 server patches (Nginx, Envoy, Apache, IIS), enforce RST_STREAM rate limits, and deploy WAF/DDoS edge mitigation."
+  },
+  {
+    "id": "PLAYBOOK-EXEC-T1059",
+    "source": "SOC_IR_PLAYBOOK",
+    "tactic": "Execution",
+    "technique_id": "T1059.001",
+    "title": "Suspicious PowerShell Execution Triage Playbook",
+    "text": "MITRE ATT&CK T1059.001 (Execution — Command and Scripting Interpreter: PowerShell): Obfuscated Base64 commands (-EncodedCommand), hidden windows (-WindowStyle Hidden), and download cradles (IEX / Net.WebClient) indicate active Execution stage activity. SOC Triage: Enable PowerShell Script Block Logging (Event ID 4104) and Module Logging (4103), isolate affected endpoints, enforce Constrained Language Mode, and inspect parent process trees."
+  },
+  {
+    "id": "PLAYBOOK-PERSIST-T1053",
+    "source": "SOC_IR_PLAYBOOK",
+    "tactic": "Persistence",
+    "technique_id": "T1053.005",
+    "title": "Scheduled Task Persistence Investigation Playbook",
+    "text": "MITRE ATT&CK T1053.005 (Persistence — Scheduled Task/Job): Adversaries abuse schtasks.exe or Task Scheduler COM APIs to maintain Persistence across reboots by executing payloads from writable directories (AppData, Temp, Public). SOC Triage: Audit Windows Security Event ID 4698 and TaskScheduler Operational logs (Event ID 106), remove unauthorized XML task definitions under C:\\Windows\\System32\\Tasks, and restrict task creation privileges."
+  },
+  {
+    "id": "PLAYBOOK-CRED-T1003",
+    "source": "SOC_IR_PLAYBOOK",
+    "tactic": "Credential Access",
+    "technique_id": "T1003.001",
+    "title": "LSASS Memory Dumping Credential Access Playbook",
+    "text": "MITRE ATT&CK T1003.001 (Credential Access — OS Credential Dumping: LSASS Memory): Tools such as Mimikatz, ProcDump, or comsvcs.dll MiniDump access lsass.exe to harvest NTLM hashes and Kerberos tickets. SOC Triage: Monitor Sysmon Event ID 10 (ProcessAccess to lsass.exe), enable Credential Guard and RunAsPPL (LSASS Protected Process Light), isolate the host, and trigger immediate enterprise password/KRBTGT resets."
+  },
+  {
+    "id": "PLAYBOOK-LAT-T1021",
+    "source": "SOC_IR_PLAYBOOK",
+    "tactic": "Lateral Movement",
+    "technique_id": "T1021.002",
+    "title": "SMB Admin Share Lateral Movement Playbook",
+    "text": "MITRE ATT&CK T1021.002 (Lateral Movement — Remote Services: SMB/Windows Admin Shares): Attackers traverse internal networks over TCP port 445 using ADMIN$, C$, or IPC$ shares via PsExec, Impacket smbexec, or WMI. SOC Triage: Correlate Windows Event IDs 4624 (Logon Type 3) and 5140 (Network Share Object Access), enforce SMB signing, segment workstation-to-workstation SMB traffic, and restrict local administrator reuse via LAPS."
+  },
+  {
+    "id": "PLAYBOOK-C2-IOC",
+    "source": "SOC_IR_PLAYBOOK",
+    "tactic": "Command and Control",
+    "technique_id": "T1071.001",
+    "title": "Outbound C2 Indicator & Proxy Triage Playbook",
+    "text": "MITRE ATT&CK T1071.001 (Command and Control — Application Layer Protocol): Suspicious external IPv4 indicators (including Tor exit nodes and uncategorized C2 infrastructure such as 185.220.101.4) observed in outbound proxy/firewall logs require immediate triage. SOC Triage: Query proxy/DNS logs for beaconing intervals and User-Agent anomalies, block the indicator at the perimeter firewall/proxy, isolate the internal source host, and capture volatile process/network state."
+  }
+]
