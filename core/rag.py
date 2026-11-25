@@ -2,6 +2,7 @@ from typing import List, Dict
 
 from .config import settings
 from . import vectorstore
+from .threat_intel import extract_threat_entities, query_threat_intel_hybrid
 
 SYSTEM_PERSONA = """You are Fortis, a senior cybersecurity consultant AI. You help clients \
 with security work: reviewing documents, configurations, code, and logs; explaining \
@@ -82,6 +83,25 @@ def build_context_block(engagement_id: str, query: str) -> str:
             version = meta.get("version")
             suffix = f" ({version})" if version else ""
             parts.append(f"[{tag}{suffix}] {h['text']}")
+
+    entities = extract_threat_entities(query)
+    has_entities = any(bool(v) for v in entities.values())
+    enriched_query = query
+    if has_entities:
+        flat_tags = [item for sub in entities.values() for item in sub]
+        enriched_query = f"{query} {' '.join(flat_tags)}"
+
+    intel_hits = query_threat_intel_hybrid(enriched_query, top_k=2)
+    if intel_hits:
+        parts.append("\n=== Threat intelligence & SOC IR playbooks ===")
+        if has_entities:
+            active_entities = {k: v for k, v in entities.items() if v}
+            parts.append(f"Extracted indicators: {active_entities}")
+        for h in intel_hits:
+            meta = h["metadata"] or {}
+            parts.append(
+                f"[{meta.get('source')} | {meta.get('intel_id')} | {meta.get('tactic')}] {h['text']}"
+            )
 
     return "\n\n".join(parts)
 

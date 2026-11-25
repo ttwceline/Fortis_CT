@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .frameworks import seed_all_frameworks, FRAMEWORK_NAMES
+from .threat_intel import seed_threat_intel
 from engine import check_model_available
 from .store import init_db
 from .routers import upload, chat, report, engagements
@@ -32,6 +33,8 @@ async def startup():
     init_db()
     logger.info("Seeding framework reference corpus: %s", FRAMEWORK_NAMES)
     seed_all_frameworks()
+    intel_count = seed_threat_intel()
+    logger.info("Seeded threat-intelligence & IR playbook records: %d", intel_count)
     warning = await check_model_available()
     if warning:
         logger.warning(warning)
@@ -40,8 +43,10 @@ async def startup():
 @app.get("/health")
 async def health():
     model_warning = await check_model_available()
+    intel_count = seed_threat_intel()
     return {
         "status": "ok" if not model_warning else "degraded",
         "detail": model_warning,
         "frameworks_loaded": FRAMEWORK_NAMES,
+        "threat_intel_records": intel_count,
     }

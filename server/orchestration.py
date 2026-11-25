@@ -23,6 +23,7 @@ from core.report_intent import (
 from core.routers.chat import run_structured_turn
 from core.routers.report import generate_report_result
 from core.structured import detect_structured_output_request
+from core.threat_intel import has_threat_entities
 import engine
 
 _LOCAL_USER = "local"
@@ -58,6 +59,7 @@ _REFUSAL_MARKERS = (
     "please ask a cybersecurity question",
 )
 
+
 def _is_stub_backend() -> bool:
     return is_stub_backend()
 
@@ -81,6 +83,8 @@ def _run_async(coro):
 
 
 def is_cybersecurity_related(text: str) -> bool:
+    if has_threat_entities(text):
+        return True
     lower = text.lower()
     return any(re.search(p, lower) for p in _CYBERSECURITY_KEYWORDS)
 
@@ -177,7 +181,6 @@ class Orchestrator:
         eng = self.create_engagement(parts[0], parts[1], parts[2] if len(parts) > 2 else "")
         client = store.get_engagement(eng["id"])["client_name"]
         return f"Created and activated **{client} — {eng['name']}** (`{eng['id']}`)."
-
 
     def _whoami(self) -> str:
         eng = self.active_engagement()
@@ -290,8 +293,6 @@ class Orchestrator:
         allow_stub: bool = False,
         enforce_stub_gate: bool = False,
     ) -> Dict:
-        # enforce_stub_gate is accepted for call-site compatibility; the gate
-        # is always enforced inside generate_report_result now.
         return await generate_report_result(engagement_id, fmt, focus_text, allow_stub=allow_stub)
 
     def generate_report_download(
